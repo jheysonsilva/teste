@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centraliza todo conteúdo */
+  align-items: center; /* centraliza conteúdo horizontal */
 }
 
 /* ======= Cabeçalho ======= */
@@ -80,7 +80,7 @@ nav ul.menu li a:focus {
   }
 }
 
-/* ======= Main e seção do formulário ======= */
+/* ======= Main e seções ======= */
 main {
   flex: 1;
   max-width: 900px;
@@ -92,13 +92,13 @@ main {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* centraliza conteúdo dentro do main */
 }
 
 section {
   margin-bottom: 2rem;
   width: 100%;
-  text-align: center;
+  text-align: center; /* centraliza todos textos */
 }
 
 h2 {
@@ -109,7 +109,80 @@ h2 {
   display: inline-block;
 }
 
-/* ======= Formulário vertical ======= */
+/* ======= Imagens ======= */
+img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  height: auto;
+  max-width: 100%; /* garante que a imagem não ultrapasse a largura da seção */
+  object-fit: cover; /* mantém proporção da imagem */
+}
+
+/* Página inicial: imagem de destaque maior controlada */
+img.destaque {
+  max-width: 600px; /* ajuste a largura máxima */
+  height: auto;
+}
+
+/* ======= Cards de Projetos ======= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center; /* centraliza os cards */
+}
+
+.card {
+  background-color: #e0f2f1;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 300px;
+  text-align: center; /* centraliza texto dentro do card */
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+}
+
+/* Ajuste das imagens dos cards para o mesmo tamanho */
+.card img {
+  width: 100%;
+  height: 200px; /* altura fixa para uniformizar */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+/* ======= Botões ======= */
+a.btn,
+button {
+  display: inline-block;
+  background-color: #0a9396;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+a.btn:hover,
+button:hover,
+a.btn:focus,
+button:focus {
+  background-color: #005f73;
+  outline: 2px solid #ffd166;
+  outline-offset: 2px;
+}
+
+/* ======= Formulário Cadastro ======= */
 form {
   display: flex;
   flex-direction: column;
@@ -120,7 +193,7 @@ form {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto; /* centraliza formulário na página */
 }
 
 fieldset {
@@ -145,7 +218,7 @@ legend {
 
 label {
   font-weight: 600;
-  text-align: left; /* deixa label alinhado à esquerda */
+  text-align: left;
 }
 
 input {
@@ -187,9 +260,49 @@ footer {
   border-radius: 0 0 10px 10px;
 }
 
+/* ======= Contraste e acessibilidade ======= */
+body.alto-contraste {
+  background-color: #000;
+  color: #fff;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer {
+  background-color: #000;
+  color: #fff;
+}
+
+body.alto-contraste a,
+body.alto-contraste button {
+  background-color: #fff;
+  color: #000;
+}
+
+body.modo-escuro {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.modo-escuro header,
+body.modo-escuro footer {
+  background-color: #1b1b1b;
+}
+
+body.modo-escuro a,
+body.modo-escuro button {
+  background-color: #0a9396;
+  color: #fff;
+}
+
 /* ======= Responsividade ======= */
 @media (max-width: 768px) {
   main {
+    padding: 1rem;
+  }
+  .cards {
+    gap: 1rem;
+  }
+  form {
     padding: 1rem;
   }
 }
