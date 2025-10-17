@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* centraliza todo conteúdo */
+  align-items: center; /* centraliza conteúdo horizontal */
 }
 
 /* ======= Cabeçalho ======= */
@@ -80,7 +80,7 @@ nav ul.menu li a:focus {
   }
 }
 
-/* ======= Main e seção do formulário ======= */
+/* ======= Main e seções ======= */
 main {
   flex: 1;
   max-width: 900px;
@@ -109,7 +109,81 @@ h2 {
   display: inline-block;
 }
 
-/* ======= Formulário vertical ======= */
+/* ======= Imagens ======= */
+img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  height: auto;
+  max-width: 100%; /* não ultrapassa a largura da seção */
+  object-fit: cover;
+}
+
+/* Imagem de destaque da página inicial */
+img.destaque, 
+img#ong-fachada {
+  max-width: 600px; /* limita largura */
+  width: 100%;
+  height: auto;
+}
+
+/* ======= Cards de Projetos ======= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.card {
+  background-color: #e0f2f1;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+/* ======= Botões ======= */
+a.btn,
+button {
+  display: inline-block;
+  background-color: #0a9396;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+a.btn:hover,
+button:hover,
+a.btn:focus,
+button:focus {
+  background-color: #005f73;
+  outline: 2px solid #ffd166;
+  outline-offset: 2px;
+}
+
+/* ======= Formulário Cadastro ======= */
 form {
   display: flex;
   flex-direction: column;
@@ -120,7 +194,7 @@ form {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto; /* centraliza formulário na página */
 }
 
 fieldset {
@@ -145,17 +219,17 @@ legend {
 
 label {
   font-weight: 600;
-  text-align: left; /* deixa label alinhado à esquerda */
+  text-align: left;
 }
 
-input {
+input, select {
   width: 100%;
   padding: 0.6rem;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-input:focus {
+input:focus, select:focus {
   outline: 2px solid #0a9396;
 }
 
@@ -190,6 +264,12 @@ footer {
 /* ======= Responsividade ======= */
 @media (max-width: 768px) {
   main {
+    padding: 1rem;
+  }
+  .cards {
+    gap: 1rem;
+  }
+  form {
     padding: 1rem;
   }
 }
