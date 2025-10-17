@@ -145,7 +145,7 @@ legend {
 
 label {
   font-weight: 600;
-  text-align: center; /* deixa label alinhado à esquerda */
+  text-align: left; /* deixa label alinhado à esquerda */
 }
 
 input {
