@@ -80,7 +80,7 @@ nav ul.menu li a:focus {
   }
 }
 
-/* ======= Main e seções ======= */
+/* ======= Main e seção do formulário ======= */
 main {
   flex: 1;
   max-width: 900px;
@@ -109,18 +109,7 @@ h2 {
   display: inline-block;
 }
 
-/* ======= Imagem da página inicial ======= */
-img#ong-fachada {
-  width: 100%;
-  max-width: 600px; /* limita o tamanho da imagem */
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* ======= Formulário vertical (mantido do seu código aprovado) ======= */
+/* ======= Formulário vertical ======= */
 form {
   display: flex;
   flex-direction: column;
@@ -150,13 +139,13 @@ legend {
 
 .form-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* garante label + input vertical */
   gap: 0.3rem;
 }
 
 label {
   font-weight: 600;
-  text-align: left;
+  text-align: left; /* deixa label alinhado à esquerda */
 }
 
 input {
@@ -198,44 +187,10 @@ footer {
   border-radius: 0 0 10px 10px;
 }
 
-/* ======= Botões de contraste e modo escuro ======= */
-body.alto-contraste {
-  background-color: #000;
-  color: #fff;
-}
-
-body.alto-contraste header,
-body.alto-contraste footer {
-  background-color: #000;
-  color: #fff;
-}
-
-body.alto-contraste a,
-body.alto-contraste button {
-  background-color: #fff;
-  color: #000;
-}
-
-body.modo-escuro {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.modo-escuro header,
-body.modo-escuro footer {
-  background-color: #1b1b1b;
-  color: #e0e0e0;
-}
-
-body.modo-escuro a,
-body.modo-escuro button {
-  background-color: #0a9396;
-  color: #fff;
-}
-
 /* ======= Responsividade ======= */
 @media (max-width: 768px) {
   main {
     padding: 1rem;
   }
 }
+ 
