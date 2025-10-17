@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- ======= Header ======= -->
   <header>
     <h1>Projetos Sociais</h1>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
@@ -20,18 +21,24 @@
     </nav>
   </header>
 
+  <!-- ======= Main ======= -->
   <main>
+    <!-- Nossos Projetos -->
     <section>
       <h2>Nossos Projetos</h2>
-      <div class="cards" tabindex="0"></div>
+      <div class="cards">
+        <!-- Cards serão renderizados dinamicamente via JS -->
+      </div>
     </section>
 
+    <!-- Voluntariado -->
     <section>
       <h2>Como se tornar voluntário</h2>
-      <p>Participe dos nossos projetos! Cadastre-se e ajude a transformar vidas.</p>
-      <a href="cadastro.html" class="btn">Quero ser voluntário</a>
+      <p>Participe dos nossos projetos! Cadastre-se em nossa plataforma e ajude a transformar vidas.</p>
+      <a class="btn" href="cadastro.html">Quero ser voluntário</a>
     </section>
 
+    <!-- Doações -->
     <section>
       <h2>Como doar</h2>
       <p>Suas doações nos ajudam a continuar nosso trabalho. Contribua com qualquer valor:</p>
@@ -40,11 +47,14 @@
     </section>
   </main>
 
+  <!-- ======= Footer ======= -->
   <footer>
-    <p>&copy; 2025 ONG Esperança Viva - Solidariedade e transformação.</p>
+    <p>&copy; 2025 ONG Esperança Viva - Transparência e Solidariedade.</p>
   </footer>
 
+  <!-- ======= Scripts ======= -->
   <script src="js/menu.js"></script>
   <script src="js/renderProjetos.js"></script>
+  <script src="js/acessibilidade.js"></script>
 </body>
 </html>
