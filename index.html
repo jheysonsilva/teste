@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ONG Esperança Viva - Solidariedade e transformação social.">
+  <meta name="description" content="Plataforma digital da ONG Esperança Viva - Conecte doadores e voluntários.">
   <title>ONG Esperança Viva</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- ======= Header ======= -->
   <header>
     <h1>ONG Esperança Viva</h1>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
@@ -20,36 +21,52 @@
     </nav>
   </header>
 
+  <!-- ======= Main ======= -->
   <main>
+    <!-- Quem Somos -->
     <section>
       <h2>Quem Somos</h2>
-      <p>A ONG Esperança Viva atua desde 2010 com foco em inclusão social e apoio a famílias em vulnerabilidade.</p>
-      <img src="img/ong-fachada.jpg" alt="Foto da sede da ONG Esperança Viva.">
+      <p>A ONG Esperança Viva atua desde 2010 com foco em inclusão social e apoio a famílias em situação de vulnerabilidade. Nosso propósito é transformar vidas por meio da solidariedade e do voluntariado.</p>
+      <img src="img/ong-fachada.jpg" alt="Foto da sede da ONG">
     </section>
 
+    <!-- Missão, Visão e Valores -->
     <section>
       <h2>Missão, Visão e Valores</h2>
       <ul>
-        <li><strong>Missão:</strong> Promover o bem-estar e o desenvolvimento humano.</li>
+        <li><strong>Missão:</strong> Promover o bem-estar social e o desenvolvimento humano.</li>
         <li><strong>Visão:</strong> Ser referência em solidariedade e transformação social.</li>
-        <li><strong>Valores:</strong> Empatia, compromisso e transparência.</li>
+        <li><strong>Valores:</strong> Empatia, compromisso, respeito e transparência.</li>
       </ul>
     </section>
 
+    <!-- Contato -->
     <section>
       <h2>Contato</h2>
       <address>
-        <p>Email: contato@ongesperancaviva.org.br</p>
-        <p>Telefone: (41) 99999-9999</p>
+        <p>Email: <a href="mailto:contato@ongesperancaviva.org.br">contato@ongesperancaviva.org.br</a></p>
+        <p>Telefone: <a href="tel:+5541999999999">(41) 99999-9999</a></p>
         <p>Endereço: Rua da Esperança, 123 – Lapa/PR</p>
       </address>
     </section>
+
+    <!-- Nossos Projetos (Cards Dinâmicos) -->
+    <section>
+      <h2>Nossos Projetos</h2>
+      <div class="cards">
+        <!-- Cards renderizados via JS -->
+      </div>
+    </section>
   </main>
 
+  <!-- ======= Footer ======= -->
   <footer>
-    <p>&copy; 2025 ONG Esperança Viva - Todos os direitos reservados.</p>
+    <p>&copy; 2025 ONG Esperança Viva - Transparência e Solidariedade.</p>
   </footer>
 
+  <!-- ======= Scripts ======= -->
   <script src="js/menu.js"></script>
+  <script src="js/renderProjetos.js"></script>
+  <script src="js/acessibilidade.js"></script>
 </body>
 </html>
